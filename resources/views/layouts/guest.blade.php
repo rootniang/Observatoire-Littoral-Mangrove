@@ -7,20 +7,20 @@
 
         <title>Login</title>
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="build/assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="build/assets/css/style.css">
+        <link rel="stylesheet" href="{{asset('build/assets/css/app.css')}}">
+        <link rel="stylesheet" href="{{asset('build/assets/css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{asset('build/assets/css/style.css')}}">
+        <link rel="stylesheet" href="{{asset('build/assets/css/icofont/icofont.min.css')}}">
 
         <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <script src="{{asset('build/assets/js/app.js')}}" defer></script>
+        <script src="{{asset('build/assets/js/script.js')}}" defer></script>
+        <script src="{{asset('build/assets/js/jquery.min.js')}}" defer></script>
+        <script src="{{asset('build/assets/js/bootstrap.min.js')}}" defer></script>
+
     </head>
     <body>
         {{ $slot }}
     </body>
-    <script src="build/assets/js/jquery.min.js"></script>
-    <script src="build/assets/js/bootstrap.min.js"></script>
-    <script src="build/assets/js/main.js"></script>
+    
 </html>
