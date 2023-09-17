@@ -57,7 +57,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{ route('new.index') }}">
                   <i class="icofont-link"></i>
                   Actualités
                 </a>
