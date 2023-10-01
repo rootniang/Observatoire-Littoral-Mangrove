@@ -51,9 +51,15 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{ route('ecosysteme.index') }}">
                   <i class="icofont-institution"></i>
                   Sites Mangroves
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('espece.index') }}">
+                  <i class="icofont-leaf"></i>
+                  Especes
                 </a>
               </li>
               <li class="nav-item">

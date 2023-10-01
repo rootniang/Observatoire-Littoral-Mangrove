@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\EspeceController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\EcosystemeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +32,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('user', UserController::class);
     Route::resource('new', NewsController::class);
+    Route::resource('ecosysteme', EcosystemeController::class);
+    Route::resource('espece', EspeceController::class);
 });
 
 require __DIR__.'/auth.php';

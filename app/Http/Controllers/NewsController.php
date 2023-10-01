@@ -88,8 +88,9 @@ class NewsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Request $request, News $new)
     {
-        //
+        $new->delete();
+        return redirect()->route('new.index');
     }
 }
