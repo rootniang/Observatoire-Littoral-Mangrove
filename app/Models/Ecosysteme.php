@@ -15,7 +15,11 @@ class Ecosysteme extends Model
         'typesol',
         'auteur',
     ];
-
+    public function updateEspeces($especeIds) {
+        
+        $this->especes()->sync($especeIds);
+    
+    }
     public function especes() {
 
         return $this->belongsToMany(Espece::class, 'ecosysteme_has_especes');

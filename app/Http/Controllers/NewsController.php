@@ -44,7 +44,7 @@ class NewsController extends Controller
             'banniere' => $imagePath,
             'auteur' => Auth::user()->id,
         ]);
-        return redirect()->route('news.index');
+        return redirect()->route('new.index');
     }
 
     /**

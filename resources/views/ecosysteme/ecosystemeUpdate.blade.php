@@ -37,7 +37,7 @@
                         <div class="mb-3">
                             <label for="typesol" class="form-label">Type sol</label>
                             <select class="form-control" name="typesol" id="typesol">
-                                <option value="">Choisir...</option>
+                                <option value="{{ $ecosysteme->typesol }}">{{ $ecosysteme->typesol }}</option>
                                 <option value="sableux">Sableux</option>
                                 <option value="rocheux">Rocheux</option>
                                 <option value="caillouteux">Caillouteux</option>

@@ -77,7 +77,21 @@ class EcosystemeController extends Controller
      */
     public function update(Request $request, Ecosysteme $ecosysteme)
     {
-        //
+        $request->validate([
+            'libelle' => ['required', 'string', 'max:255'],
+            'localisation' => ['required', 'string', 'max:255'],
+            'typesol' => ['required'],
+            'noms' => ['required'],
+        ]);
+
+        $ecosysteme->update([
+            'libelle' => $request->libelle,
+            'localisation' => $request->localisation,
+            'typesol' => $request->typesol,
+            'auteur' => Auth::user()->id,
+        ]);
+        $ecosysteme->updateEspeces($request->noms) ;
+        return redirect()->route('ecosysteme.index'); 
     }
 
     /**
