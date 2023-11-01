@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\MediaController;
 use App\Http\Controllers\EspeceController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ProfileController;
@@ -36,6 +37,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('ecosysteme', EcosystemeController::class);
     Route::resource('espece', EspeceController::class);
     Route::resource('article', ArticleController::class);
+    Route::resource('media', MediaController::class);
 });
 
 require __DIR__.'/auth.php';
