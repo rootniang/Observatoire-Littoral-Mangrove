@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CarteController;
+use App\Http\Controllers\FloreController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\AlerteController;
 use App\Http\Controllers\EspeceController;
@@ -38,6 +39,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('new', NewsController::class);
     Route::resource('ecosysteme', EcosystemeController::class);
     Route::resource('espece', EspeceController::class);
+    Route::resource('flore', FloreController::class);
     Route::resource('article', ArticleController::class);
     Route::resource('media', MediaController::class);
     Route::resource('alerte', AlerteController::class);
