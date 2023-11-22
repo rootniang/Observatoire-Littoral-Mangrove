@@ -64,7 +64,7 @@
                 </a>
                 <div class="collapse" id="home-collapse">
                   <ul class="btn-toggle-nav">
-                    <li class="nav-item"><a href="{{ route('espece.index') }}" class="nav-link">Faune</a></li>
+                    <li class="nav-item"><a href="{{ route('faune.index') }}" class="nav-link">Faune</a></li>
                     <li class="nav-item"><a href="{{ route('flore.index') }}" class="nav-link">Flore</a></li>
                   </ul>
                 </div>

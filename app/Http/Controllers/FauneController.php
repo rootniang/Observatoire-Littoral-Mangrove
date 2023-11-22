@@ -5,15 +5,15 @@ namespace App\Http\Controllers;
 use App\Models\Espece;
 use Illuminate\Http\Request;
 
-class FloreController extends Controller
+class FauneController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $especes = Espece::where('categorie', 'flore')->paginate(10);
-        return view('espece.flore.floreList', compact('especes'));
+        $especes = Espece::where('categorie', 'faune')->paginate(10);
+        return view('espece.faune.fauneList', compact('especes'));
     }
 
     /**
@@ -21,7 +21,7 @@ class FloreController extends Controller
      */
     public function create()
     {
-        return view('espece.flore.floreCreate');
+        return view('espece.faune.fauneCreate');
     }
 
     /**
@@ -36,9 +36,12 @@ class FloreController extends Controller
             'longevite' => ['required', 'string', 'max:191'],
             'description' => ['required'],
             'banniere' => ['required'],
-            'hauteur_min' => ['required'],
-            'hauteur_max' => ['required'],
-            'genre' => ['required', 'string', 'max:191'],
+            'taille_min' => ['required'],
+            'taille_max' => ['required'],
+            'poid_min' => ['required'],
+            'poid_max' => ['required'],
+            'type_regime' => ['required', 'string', 'max:191'],
+            'type_reproduction' => ['required', 'string', 'max:191'],
         ]);
 
         $file = $request->file("banniere");
@@ -51,11 +54,14 @@ class FloreController extends Controller
             'categorie' => 'flore',
             'longevite' => $request->longevite,
             'image' => $filePath,
-            'hauteur_min' => $request->hauteur_min,
-            'hauteur_max' => $request->hauteur_max,
-            'genre' => $request->genre,
+            'taille_min' => $request->taille_min,
+            'taille_max' => $request->taille_max,
+            'poid_min' => $request->poid_min,
+            'poid_max' => $request->poid_max,
+            'type_regime' => $request->type_regime,
+            'type_reproduction' => $request->type_reproduction,
         ]);
-        return redirect()->route('flore.index');
+        return redirect()->route('faune.index');
     }
 
     /**
@@ -88,6 +94,6 @@ class FloreController extends Controller
     public function destroy(Request $request, Espece $espece)
     {
         $espece->delete();
-        return redirect()->route('flore.index');
+        return redirect()->route('faune.index');
     }
 }
