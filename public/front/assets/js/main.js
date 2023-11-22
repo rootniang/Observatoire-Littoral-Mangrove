@@ -1,13 +1,3 @@
-// $(function() {
-//   var c = $("#header");
-//   var d = c.offset().top - 20;
-    
-//   $(window).scroll(function() {
-//     var b = $(window).scrollTop();
-//     c.toggleClass("header-fixed", b > d);
-//   });
-// });
-
 mapboxgl.accessToken = 'pk.eyJ1Ijoicm9vdG5pYW5nOTUiLCJhIjoiY2xvdzI3dGthMTJodzJrcTBqMWY1dzBweSJ9.lODm9ALWAdthxe6j5hWz3A';
 const map = new mapboxgl.Map({
 	container: 'map', // container ID
@@ -17,87 +7,93 @@ const map = new mapboxgl.Map({
 	zoom: 7,
 	projection: 'globe' // starting zoom
 });
+const zone = [
+    {
+        id: 'cs',
+        data: 'cs.geojson'
+    },
+    {
+        id: 'sl',
+        data: 'sl.geojson'
+    },
+    {
+        id: 'jf',
+        data: 'jf.geojson'
+    },
+    {
+        id: 'sk',
+        data: 'sk.geojson'
+    },
+    {
+        id: 'fs',
+        data: 'fs.geojson'
+    },
+];
+
 map.on('load', () => {
-    map.setFog({});
-    map.addSource('loc', {
-    'type': 'geojson',
-    'data': 'data.geojson',
+    zone.forEach(({id, data}) => {
+        map.addSource(id, {
+        type: 'geojson',
+        data: data
+        });
+        // Add a new layer to visualize the polygon.
+        map.addLayer({
+            'id': id,
+            'type': 'fill',
+            'source': id, // reference the data source
+            'layout': {},
+            'paint': {
+            'fill-color': '#0CB3C4', // blue color fill
+            'fill-opacity': 0.5
+            }
+        });
+        // Add a black outline around the polygon.
+        map.addLayer({
+            'id': 'outline',
+            'type': 'line',
+            'source': id,
+            'layout': {},
+            'paint': {
+            'line-color': '#000',
+            'line-width': 1
+            }
+        });
     })
+})
+
+const ecosysteme = [
+    {
+        name: 'Saint Louis',
+        color:'',
+        lngLat: [-16.504211,16.027336]
+    },
+    {
+        name: 'Joal Fadiouth',
+        color:'',
+        lngLat: [-16.740417,14.069981]
+    },
+    {
+        name: 'Sokone',
+        color:'',
+        lngLat: [-16.498718,13.888745]
+    },
+    {
+        name: 'Fleuve Senegal',
+        color:'',
+        lngLat: [-16.235046,13.386948]
+    },
+    {
+        name: 'Basse Casamance',
+        color:'',
+        lngLat: [-16.608582,12.680535]
+    },
+];
+ecosysteme.forEach(({name, lngLat}) => {
+    new mapboxgl.Marker()
+    .setLngLat(lngLat)
+    .addTo(map);
 });
-map.addLayer({
-    'id': 'loc',
-    'type': 'fill',
-    'source': 'loc', // reference the data source
-    'layout': {},
-    'paint': {
-    'fill-color': '#0080ff', // blue color fill
-    'fill-opacity': 0.5
-    }
-});
-// Add a black outline around the polygon.
-map.addLayer({
-    'id': 'outline',
-    'type': 'line',
-    'source': 'loc',
-    'layout': {},
-    'paint': {
-    'line-color': '#000',
-    'line-width': 3
-    }
-});
-// const ecosysteme = [
-//     {
-//         name: 'Saint Louis',
-//         color:'',
-//         lngLat: [-16.504211,16.027336]
-//     },
-//     {
-//         name: 'Joal Fadiouth',
-//         color:'',
-//         lngLat: [-16.740417,14.069981]
-//     },
-//     {
-//         name: 'Sokone',
-//         color:'',
-//         lngLat: [-16.498718,13.888745]
-//     },
-//     {
-//         name: 'Fleuve Senegal',
-//         color:'',
-//         lngLat: [-16.235046,13.386948]
-//     },
-//     {
-//         name: 'Basse Casamance',
-//         color:'',
-//         lngLat: [-16.608582,12.680535]
-//     },
-// ];
-// ecosysteme.forEach(({name, lngLat}) => {
-//     new mapboxgl.Marker()
-//     .setLngLat(lngLat)
-//     .addTo(map);
-// })
-
-// const marker1 = new mapboxgl.Marker()
-//     .setLngLat([-16.504211,16.027336])
-//     .addTo(map);
-
-// const marker2 = new mapboxgl.Marker()
-//     .setLngLat([-16.740417,14.069981])
-//     .addTo(map);
-
-// const marker3 = new mapboxgl.Marker()
-//     .setLngLat([-16.498718,13.888745])
-//     .addTo(map);
-
-// const marker4 = new mapboxgl.Marker()
-//     .setLngLat([-16.235046,13.386948])
-//     .addTo(map);
-
-// const marker5 = new mapboxgl.Marker()
-//     .setLngLat([-16.608582,12.680535])
-//     .addTo(map);
-
+//Modal
 let cartestyle = document.getElementById("carte");
 let modalcarte = document.getElementById("modalcarte");
 cartestyle.addEventListener("click", () => {
@@ -118,3 +114,4 @@ carteinfo.addEventListener("click", () => {
         modalinfos.style.display = "block" ;
     }
 })
+//End Modal

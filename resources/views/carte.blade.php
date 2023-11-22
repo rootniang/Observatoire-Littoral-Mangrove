@@ -64,7 +64,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="#" class="nav-link py-3 border-bottom rounded-0" title="Rafraichir">
+				<a href="{{ route('carte') }}" class="nav-link py-3 border-bottom rounded-0" title="Rafraichir">
 					<i class="fa-solid fa-arrows-rotate"></i>
 				</a>
 			</li>
@@ -79,7 +79,7 @@
 						<div class="accordion-item">
 							<h2 class="accordion-header" id="headingOne">
 							<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-								Accordion Item #1
+								La Flore
 							</button>
 							</h2>
 							<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
@@ -91,7 +91,7 @@
 						<div class="accordion-item">
 							<h2 class="accordion-header" id="headingTwo">
 							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-								Accordion Item #2
+								La Faune
 							</button>
 							</h2>
 							<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
@@ -103,7 +103,7 @@
 						<div class="accordion-item">
 							<h2 class="accordion-header" id="headingThree">
 							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-								Accordion Item #3
+								Les Sols
 							</button>
 							</h2>
 							<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
