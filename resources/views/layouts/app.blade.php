@@ -15,6 +15,7 @@
         <script src="{{asset('build/assets/js/jquery.min.js')}}" defer></script>
         <script src="{{asset('build/assets/js/script.js')}}" defer></script>
         <script src="{{asset('build/assets/bootstrap/js/bootstrap.min.js')}}" defer></script>
+        <script src="{{asset('build/assets/js/dashboard.js')}}" defer></script>
         {{-- <script src="{{asset('build/assets/js/main.js')}}" defer></script> --}}
     </head>
     <body>
@@ -57,10 +58,16 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ route('espece.index') }}">
+                <a class="nav-link" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false" href="{{ route('espece.index') }}">
                   <i class="icofont-leaf"></i>
                   Especes
                 </a>
+                <div class="collapse" id="home-collapse">
+                  <ul class="btn-toggle-nav">
+                    <li class="nav-item"><a href="{{ route('espece.index') }}" class="nav-link">Faune</a></li>
+                    <li class="nav-item"><a href="{{ route('espece.index') }}" class="nav-link">Flore</a></li>
+                  </ul>
+                </div>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('new.index') }}">
@@ -128,7 +135,5 @@
         </main>
       </div>
     </div>
-
-
   </body>
 </html>
