@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApiController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CarteController;
@@ -45,6 +46,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('article', ArticleController::class);
     Route::resource('media', MediaController::class);
     Route::resource('alerte', AlerteController::class);
+    Route::get('/genapi', [ApiController::class, 'index'])->name('generate');
 });
 
 require __DIR__.'/auth.php';
