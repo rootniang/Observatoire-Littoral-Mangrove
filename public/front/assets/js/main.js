@@ -1,117 +1,197 @@
-mapboxgl.accessToken = 'pk.eyJ1Ijoicm9vdG5pYW5nOTUiLCJhIjoiY2xvdzI3dGthMTJodzJrcTBqMWY1dzBweSJ9.lODm9ALWAdthxe6j5hWz3A';
-const map = new mapboxgl.Map({
-	container: 'map', // container ID
-	// Choose from Mapbox's core styles, or make your own style with Mapbox Studio
-	style: 'mapbox://styles/mapbox/streets-v12', // style URL
-	center: [-14.705200,14.652683], // starting position [lng, lat]
-	zoom: 7,
-	projection: 'globe' // starting zoom
-});
-const zone = [
-    {
-        id: 'cs',
-        data: 'cs.geojson'
-    },
-    {
-        id: 'sl',
-        data: 'sl.geojson'
-    },
-    {
-        id: 'jf',
-        data: 'jf.geojson'
-    },
-    {
-        id: 'sk',
-        data: 'sk.geojson'
-    },
-    {
-        id: 'fs',
-        data: 'fs.geojson'
-    },
-];
+(function ($) {
+    "use strict";
 
-map.on('load', () => {
-    zone.forEach(({id, data}) => {
-        map.addSource(id, {
-        type: 'geojson',
-        data: data
-        });
-        // Add a new layer to visualize the polygon.
-        map.addLayer({
-            'id': id,
-            'type': 'fill',
-            'source': id, // reference the data source
-            'layout': {},
-            'paint': {
-            'fill-color': '#0CB3C4', // blue color fill
-            'fill-opacity': 0.5
+    $(document).ready(function($){
+        
+        // testimonial sliders
+        $(".testimonial-sliders").owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: true,
+            responsive:{
+                0:{
+                    items:1,
+                    nav:false
+                },
+                600:{
+                    items:1,
+                    nav:false
+                },
+                1000:{
+                    items:1,
+                    nav:false,
+                    loop:true
+                }
             }
         });
-        // Add a black outline around the polygon.
-        map.addLayer({
-            'id': 'outline',
-            'type': 'line',
-            'source': id,
-            'layout': {},
-            'paint': {
-            'line-color': '#000',
-            'line-width': 1
+
+        // homepage slider
+        $(".homepage-slider").owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: true,
+            nav: true,
+            dots: false,
+            navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
+            responsive:{
+                0:{
+                    items:1,
+                    nav:false,
+                    loop:true
+                },
+                600:{
+                    items:1,
+                    nav:true,
+                    loop:true
+                },
+                1000:{
+                    items:1,
+                    nav:true,
+                    loop:true
+                }
             }
         });
-    })
-})
 
-const ecosysteme = [
-    {
-        name: 'Saint Louis',
-        color:'',
-        lngLat: [-16.504211,16.027336]
+        // logo carousel
+        $(".logo-carousel-inner").owlCarousel({
+            items: 4,
+            loop: true,
+            autoplay: true,
+            margin: 30,
+            responsive:{
+                0:{
+                    items:1,
+                    nav:false
+                },
+                600:{
+                    items:3,
+                    nav:false
+                },
+                1000:{
+                    items:4,
+                    nav:false,
+                    loop:true
+                }
+            }
+        });
+
+        // count down
+        if($('.time-countdown').length){  
+            $('.time-countdown').each(function() {
+            var $this = $(this), finalDate = $(this).data('countdown');
+            $this.countdown(finalDate, function(event) {
+                var $this = $(this).html(event.strftime('' + '<div class="counter-column"><div class="inner"><span class="count">%D</span>Days</div></div> ' + '<div class="counter-column"><div class="inner"><span class="count">%H</span>Hours</div></div>  ' + '<div class="counter-column"><div class="inner"><span class="count">%M</span>Mins</div></div>  ' + '<div class="counter-column"><div class="inner"><span class="count">%S</span>Secs</div></div>'));
+            });
+         });
+        }
+
+        // projects filters isotop
+        $(".product-filters li").on('click', function () {
+            
+            $(".product-filters li").removeClass("active");
+            $(this).addClass("active");
+
+            var selector = $(this).attr('data-filter');
+
+            $(".product-lists").isotope({
+                filter: selector,
+            });
+            
+        });
+        
+        // isotop inner
+        $(".product-lists").isotope();
+
+        // magnific popup
+        $('.popup-youtube').magnificPopup({
+            disableOn: 700,
+            type: 'iframe',
+            mainClass: 'mfp-fade',
+            removalDelay: 160,
+            preloader: false,
+            fixedContentPos: false
+        });
+
+        // light box
+        $('.image-popup-vertical-fit').magnificPopup({
+            type: 'image',
+            closeOnContentClick: true,
+            mainClass: 'mfp-img-mobile',
+            image: {
+                verticalFit: true
+            }
+        });
+
+        // homepage slides animations
+        $(".homepage-slider").on("translate.owl.carousel", function(){
+            $(".hero-text-tablecell .subtitle").removeClass("animated fadeInUp").css({'opacity': '0'});
+            $(".hero-text-tablecell h1").removeClass("animated fadeInUp").css({'opacity': '0', 'animation-delay' : '0.3s'});
+            $(".hero-btns").removeClass("animated fadeInUp").css({'opacity': '0', 'animation-delay' : '0.5s'});
+        });
+
+        $(".homepage-slider").on("translated.owl.carousel", function(){
+            $(".hero-text-tablecell .subtitle").addClass("animated fadeInUp").css({'opacity': '0'});
+            $(".hero-text-tablecell h1").addClass("animated fadeInUp").css({'opacity': '0', 'animation-delay' : '0.3s'});
+            $(".hero-btns").addClass("animated fadeInUp").css({'opacity': '0', 'animation-delay' : '0.5s'});
+        });
+
+       
+
+        // stikcy js
+        $("#sticker").sticky({
+            topSpacing: 0
+        });
+
+        //mean menu
+        $('.main-menu').meanmenu({
+            meanMenuContainer: '.mobile-menu',
+            meanScreenWidth: "992"
+        });
+        
+         // search form
+        $(".search-bar-icon").on("click", function(){
+            $(".search-area").addClass("search-active");
+        });
+
+        $(".close-btn").on("click", function() {
+            $(".search-area").removeClass("search-active");
+        });
+    
+    });
+
+
+    jQuery(window).on("load",function(){
+        jQuery(".loader").fadeOut(1000);
+    });
+
+
+}(jQuery));
+
+const swiper = new Swiper('.swiper-atout', {
+    // Optional parameters
+    autoplay: {delay : 2000000000},
+    slidesPerView: 3,
+    loop: true,
+    speed:1000,
+    spaceBetween:30,  
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next-atout',
+        prevEl: '.swiper-button-prev-atout',
     },
-    {
-        name: 'Joal Fadiouth',
-        color:'',
-        lngLat: [-16.740417,14.069981]
-    },
-    {
-        name: 'Sokone',
-        color:'',
-        lngLat: [-16.498718,13.888745]
-    },
-    {
-        name: 'Fleuve Senegal',
-        color:'',
-        lngLat: [-16.235046,13.386948]
-    },
-    {
-        name: 'Basse Casamance',
-        color:'',
-        lngLat: [-16.608582,12.680535]
-    },
-];
-ecosysteme.forEach(({name, lngLat}) => {
-    new mapboxgl.Marker()
-    .setLngLat(lngLat)
-    .addTo(map);
+    breakpoints: {
+        1600: {
+            slidesPerView:3,spaceBetween:40
+        },
+        1500: {
+            slidesPerView:3,spaceBetween:30
+        },
+        991: {
+            slidesPerView:3,spaceBetween:20
+        },
+        320: {
+            slidesPerView:1,spaceBetween:10
+        }
+    }
+
 });
-//Modal
-let cartestyle = document.getElementById("carte");
-let modalcarte = document.getElementById("modalcarte");
-cartestyle.addEventListener("click", () => {
-    if(getComputedStyle(modalcarte).display != "none"){
-        modalcarte.style.display = "none" ;
-    }
-    else {
-        modalcarte.style.display = "block" ;
-    }
-})
-let carteinfo = document.getElementById("infos");
-let modalinfos = document.getElementById("modalinfos");
-carteinfo.addEventListener("click", () => {
-    if(getComputedStyle(modalinfos).display != "none"){
-        modalinfos.style.display = "none" ;
-    }
-    else {
-        modalinfos.style.display = "block" ;
-    }
-})
-//End Modal

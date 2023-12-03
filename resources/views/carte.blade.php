@@ -30,12 +30,36 @@
 				<div class="mymodcontainer" id="modalcarte" style="display: none">
 					<h3 class="mod-title">Style de la carte</h3>
 					<hr>
-					<div class="style-container">
-						<div class="style-content">
+					<div id="menu" class="style-container">
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="exampleRadios" id="streets-v12" value="option2" checked>
+							<label class="form-check-label" for="exampleRadios2">
+								Street
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="exampleRadios" id="dark-v11" value="option2">
+							<label class="form-check-label" for="exampleRadios2">
+								Sombre
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="exampleRadios" id="satellite-streets-v12" value="option2">
+							<label class="form-check-label" for="exampleRadios2">
+								Satellite
+							</label>
+						</div>
+						<div class="form-check">
+							<input class="form-check-input" type="radio" name="exampleRadios" id="light-v11" value="option1">
+							<label class="form-check-label" for="exampleRadios1">
+								Light
+							</label>
+						</div>
+						{{-- <div class="style-content">
 							<h4>Claire</h4>
 							<div class="inner-style">
 								<img src="{{asset('front/assets/img/clair.webp')}}" alt="">
-								<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+								<input class="form-check-input" type="radio" value="option1" id="light-v11">
 								<p>Style Claire</p>
 							</div>
 						</div>
@@ -43,7 +67,7 @@
 							<h4>Sombre</h4>
 							<div class="inner-style">
 								<img src="{{asset('front/assets/img/sombre.webp')}}" alt="">
-								<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+								<input class="form-check-input" type="radio" value="option2" id="dark-v11">
 								<p>Style Sombre</p>
 							</div>
 						</div>
@@ -51,17 +75,41 @@
 							<h4>Satellite</h4>
 							<div class="inner-style">
 								<img src="{{asset('front/assets/img/satellite.webp')}}" alt="">
-								<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+								<input class="form-check-input" type="radio" value="option3" id="satellite-streets-v12">
 								<p>Style Satellite</p>
 							</div>
-						</div>
+						</div> --}}
 					</div>
 				</div>
 			</li>
 			<li>
-				<a href="#" class="nav-link py-3 border-bottom rounded-0" title="Place">
+				<a href="#" class="nav-link py-3 border-bottom rounded-0" id="place" title="Place">
 					<i class="fa-solid fa-globe"></i>
 				</a>
+				<div class="mymodcontainer" id="modalplace" style="display: none">
+					<h3 class="mod-title">Zones de mangroves</h3>
+					<hr>
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="checkbox" id="saintlouis" >
+						<label class="form-check-label" for="flexSwitchCheckChecked">Saint Louis</label>
+					</div>
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="checkbox" id="joal" >
+						<label class="form-check-label" for="flexSwitchCheckChecked">Joal Fadiouth</label>
+					</div>
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="checkbox" id="sokone" >
+						<label class="form-check-label" for="flexSwitchCheckChecked">Sokone</label>
+					</div>
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="checkbox" id="fleuvesenegal" >
+						<label class="form-check-label" for="flexSwitchCheckChecked">Fleuve Senegal</label>
+					</div>
+					<div class="form-check form-switch">
+						<input class="form-check-input" type="checkbox" id="casamance" >
+						<label class="form-check-label" for="flexSwitchCheckChecked">Basse Casamance</label>
+					</div>
+				</div>
 			</li>
 			<li>
 				<a href="{{ route('carte') }}" class="nav-link py-3 border-bottom rounded-0" title="Rafraichir">
@@ -84,7 +132,19 @@
 							</h2>
 							<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
 							<div class="accordion-body">
-								<strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+								Le Sénégal compte 6 espèces de mangroves. Parmi eux, aucun n’est considéré comme menacé par la Liste rouge de l’UICN.
+								<br>
+								<strong>Acrostichum aureum</strong>
+								<br>
+								<strong>Avicennia germinans</strong>
+								<br>
+								<strong>Conocarpus erectus</strong>
+								<br>
+								<strong>Laguncularia racemosa</strong>
+								<br>
+								<strong>Rhizophora mangle</strong>
+								<br>
+								<strong>Rhizophora racemosa</strong>
 							</div>
 							</div>
 						</div>
@@ -100,18 +160,7 @@
 							</div>
 							</div>
 						</div>
-						<div class="accordion-item">
-							<h2 class="accordion-header" id="headingThree">
-							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-								Les Sols
-							</button>
-							</h2>
-							<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-							<div class="accordion-body">
-								<strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-							</div>
-							</div>
-						</div>
+						
 					</div>
 				</div>
 			</li>
