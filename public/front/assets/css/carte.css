@@ -1,0 +1,110 @@
+.header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.flex-box .text-center p {
+    border: 1px solid;
+    padding: 9px 20px;
+    width: 120px;
+    font-size: 18px;
+}
+
+.flex-box .text-center {
+    margin-top: 50px;
+}
+
+.page-contenu {
+    text-align: left;
+}
+
+ul.nav li {
+    padding: 8px;
+}
+
+ul.nav li a {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: white;
+}
+
+a.d-flex img {
+    width: 265px;
+    height: auto;
+}
+
+hr {
+    margin-bottom: 2em;
+}
+
+.style-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.style-content {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    gap: 12px;
+}
+
+.inner-style img {
+    width: 75px;
+    height: 75px;
+}
+
+.inner-style p {
+    margin: 0;
+}
+
+.inner-style {
+    display: flex;
+    align-items: center;
+    gap: 3%;
+    width: 100%;
+}
+
+.mymodcontainer {
+    position: absolute;
+    z-index: 9;
+    background: white;
+    left: 4%;
+    top: 12%;
+    padding: 2% 4% 2% 2%;
+    border-radius: 5px;
+    transition: all .5s;
+    max-width: 500px;
+    min-width: 400px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: #598527;
+}
+
+.nav-pills .nav-link.active i {
+    color: white;
+}
+
+.nav-pills .nav-link i {
+    color: #598527;
+    font-size: 22px;
+}
+
+img.logocarte {
+    position: relative;
+    height: auto;
+    left: -3px;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}

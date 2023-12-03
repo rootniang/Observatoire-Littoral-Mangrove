@@ -7,6 +7,7 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 		<link rel="stylesheet" href="{{asset('front/assets/bootstrap/css/bootstrap.min.css')}}">
         <link rel="stylesheet" href="{{asset('front/assets/css/main.css')}}">
+		<link rel="stylesheet" href="{{asset('front/assets/css/carte.css')}}">
 		<link rel="stylesheet" href="{{asset('front/assets/fontawesome/css/fontawesome.css')}}">
 		<link rel="stylesheet" href="{{asset('front/assets/fontawesome/css/brands.css')}}">
 		<link rel="stylesheet" href="{{asset('front/assets/fontawesome/css/solid.css')}}">
@@ -14,7 +15,8 @@
 		<script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
 		<script src="{{asset('front/assets/js/jquery-1.11.3.min.js')}}" defer></script>
         <script src="{{asset('front/assets/bootstrap/js/bootstrap.min.js')}}" defer></script>
-        <script src="{{asset('front/assets/js/main.js')}}" defer></script>
+        
+		<script src="{{asset('front/assets/js/script.js')}}" defer></script>
 	</head>
 	<body>
 	<div class="d-flex flex-row">	
