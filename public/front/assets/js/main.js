@@ -135,8 +135,6 @@
             $(".hero-btns").addClass("animated fadeInUp").css({'opacity': '0', 'animation-delay' : '0.5s'});
         });
 
-       
-
         // stikcy js
         $("#sticker").sticky({
             topSpacing: 0

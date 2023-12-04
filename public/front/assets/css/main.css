@@ -166,6 +166,10 @@ body {
   overflow-x: hidden;
 }
 
+section {
+  margin: 20px 0;
+}
+
 .comment-template {
   padding: 7em 14% 3em;
 }
@@ -1615,6 +1619,69 @@ input[type="submit"] {
 .homepage-slider div.hero-text-tablecell div {
   height: auto;
 }
+
+.remonter {
+  position: fixed;
+  z-index: 9999;
+  display: block;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+}
+
+.remonter button {
+  display: block;
+  padding: 8px;
+  text-align: center;
+  background: #598527;
+  border-radius: 3px;
+  border: none;
+  transform: rotate(0deg);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.remonter button:after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: pulse-border 1s ease-out infinite;
+  background: #598527;
+  z-index: -1
+}
+
+@keyframes pulse-border {
+  0% {
+    transform: scale(1);
+    opacity: 1
+  }
+
+  100% {
+    transform: scale(1.8);
+    opacity: 0
+  }
+}
+
+.remonter button img {
+  height: 20px;
+}
+
+.remonter button:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80)
+}
+
 
 .single-homepage-slider {
   background-size: cover;

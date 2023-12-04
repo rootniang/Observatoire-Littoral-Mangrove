@@ -10,4 +10,24 @@ class CarteController extends Controller
     {
         return view ('carte');
     }
+
+    public function presentation()
+    {
+        return view ('presentation');
+    }
+
+    public function articleList()
+    {
+        return view ('articleList');
+    }
+
+    public function ressourceList()
+    {
+        return view ('ressourceList');
+    }
+
+    public function contact()
+    {
+        return view ('contact');
+    }
 }

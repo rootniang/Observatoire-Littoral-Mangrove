@@ -45,7 +45,7 @@
                         <div class="main-menu-wrap">
                             <!-- logo -->
                             <div class="site-logo">
-                                <a href="index.html">
+                                <a href="/">
                                     <img src="{{asset('front/assets/img/logo.png')}}" alt="">
                                 </a>
                             </div>
@@ -55,11 +55,11 @@
                             <nav class="main-menu">
                                 <ul>
                                     <li class="current-list-item" ><a href="/">Accueil</a></li>
-                                    <li><a href="">Présentation</a></li>
+                                    <li><a href="{{ route('presentation') }}">Présentation</a></li>
                                     <li><a href="{{ route('carte') }}">La carte</a></li>
-                                    <li><a href="">Nos articles</a></li>
-                                    <li><a href="">Nos ressources</a></li>
-                                    <li><a href="">Contact</a></li>
+                                    <li><a href="{{ route('articlelist') }}">Nos articles</a></li>
+                                    <li><a href="{{ route('ressourcelist') }}">Nos ressources</a></li>
+                                    <li><a href="{{ route('contact') }}">Contact</a></li>
                                     <li>
                                         <div class="header-icons">
                                             <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
@@ -142,6 +142,7 @@
                 </div>
             </div>
         </div>
+        <div class="remonter"><a href="{{ route('alertefront') }}"><button type="button"><img src="{{asset('front/assets/img/remonter.svg')}}" alt="Haut du site" width="49" height="48"></button></a></div>
         <!-- end footer -->
         
         <!-- copyright -->

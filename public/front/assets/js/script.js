@@ -247,32 +247,43 @@ const ecosysteme = [
     {
         name: 'Saint Louis',
         color:'',
-        lngLat: [-16.504211,16.027336]
+        lngLat: [-16.504211,16.027336],
+        text: 'Zone de mangrove de Saint Louis'
     },
     {
         name: 'Joal Fadiouth',
         color:'',
-        lngLat: [-16.740417,14.069981]
+        lngLat: [-16.740417,14.069981],
+        text: 'Zone de mangrove de Joal Fadiouth'
     },
     {
         name: 'Sokone',
         color:'',
-        lngLat: [-16.498718,13.888745]
+        lngLat: [-16.498718,13.888745],
+        text: 'Zone de mangrove de Sokone'
     },
     {
         name: 'Fleuve Senegal',
         color:'',
-        lngLat: [-16.235046,13.386948]
+        lngLat: [-16.235046,13.386948],
+        text: 'Zone de mangrove du Fleuve Senegal'
     },
     {
         name: 'Basse Casamance',
         color:'',
-        lngLat: [-16.608582,12.680535]
+        lngLat: [-16.608582,12.680535],
+        text: 'Zone de mangrove de la basse Casamance'
     },
 ];
-ecosysteme.forEach(({name, lngLat}) => {
+// create the popup
+const popup = new mapboxgl.Popup({ offset: 0 }).setText(
+'Zone de mangrove de la basse Casamance.'
+).setLngLat([-16.608582,12.680535]);
+ecosysteme.forEach(({name, lngLat, text}) => {
+    let pop = new mapboxgl.Popup({ offset: 0 }).setText(text).setLngLat(lngLat);
     new mapboxgl.Marker()
     .setLngLat(lngLat)
+    .setPopup(pop)
     .addTo(map);
 });
 const layerList = document.getElementById('menu');

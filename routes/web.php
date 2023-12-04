@@ -33,6 +33,11 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/carte', [CarteController::class, 'index'])->name('carte');
+Route::get('/presentation', [CarteController::class, 'presentation'])->name('presentation');
+Route::get('/articlelist', [CarteController::class, 'articleList'])->name('articlelist');
+Route::get('/ressourcelist', [CarteController::class, 'ressourceList'])->name('ressourcelist');
+Route::get('/contact', [CarteController::class, 'contact'])->name('contact');
+Route::get('/alertefront', [AlerteController::class, 'alerteFront'])->name('alertefront');
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

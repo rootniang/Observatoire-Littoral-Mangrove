@@ -21,6 +21,11 @@ class AlerteController extends Controller
     {
         //
     }
+    
+    public function alerteFront()
+    {
+        return view('alerte.alerteCreate');
+    }
 
     /**
      * Store a newly created resource in storage.
