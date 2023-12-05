@@ -121,11 +121,11 @@
                             <h2 class="widget-title">Pages</h2>
                             <ul>
                                 <li><a href="/">Accueil</a></li>
-                                <li><a href="">Présentation</a></li>
+                                <li><a href="{{ route('presentation') }}">Présentation</a></li>
                                 <li><a href="{{ route('carte') }}">La carte</a></li>
-                                <li><a href="">Nos articles</a></li>
-                                <li><a href="">Nos ressources</a></li>
-                                <li><a href="">Contact</a></li>
+                                <li><a href="{{ route('articlelist') }}">Nos articles</a></li>
+                                <li><a href="{{ route('ressourcelist') }}">Nos ressources</a></li>
+                                <li><a href="{{ route('contact') }}">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -150,7 +150,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
-                        <p>Copyrights &copy; 2023 - <a href="https://imransdesign.com/">ONMS</a>,  All Rights Reserved.</p>
+                        <p>Copyrights &copy; 2023 - <a href="">ONMS</a>,  All Rights Reserved.</p>
                     </div>
                     <div class="col-lg-6 text-right col-md-12">
                         <div class="social-icons">

@@ -11,8 +11,8 @@
                                     <p class="subtitle">Sauvons nos Mangroves</p>
                                     <h1>Un engagement pour la préservation, une mangrove à la fois.</h1>
                                     <div class="hero-btns">
-                                        <a href="shop.html" class="boxed-btn">S'engager</a>
-                                        <a href="contact.html" class="bordered-btn">Contactez-nous</a>
+                                        <a href="{{ route('contact') }}" class="boxed-btn">S'engager</a>
+                                        <a href="{{ route('contact') }}" class="bordered-btn">Contactez-nous</a>
                                     </div>
                                 </div>
                             </div>
@@ -30,8 +30,8 @@
                                     <p class="subtitle">Mangroves Vivantes, Avenir Prospère</p>
                                     <h1>Investissons dans la conservation des mangroves pour un Sénégal plus durable.</h1>
                                     <div class="hero-btns">
-                                        <a href="shop.html" class="boxed-btn">S'engager</a>
-                                        <a href="contact.html" class="bordered-btn">Contactez-nous</a>
+                                        <a href="{{ route('contact') }}" class="boxed-btn">S'engager</a>
+                                        <a href="{{ route('contact') }}" class="bordered-btn">Contactez-nous</a>
                                     </div>
                                 </div>
                             </div>
@@ -49,8 +49,8 @@
                                     <p class="subtitle">Protéger les Racines de la Vie Marine</p>
                                     <h1>Ensemble, préservons les mangroves pour un équilibre écologique et une richesse marine inestimable.</h1>
                                     <div class="hero-btns">
-                                        <a href="shop.html" class="boxed-btn">S'engager</a>
-                                        <a href="contact.html" class="bordered-btn">Contactez-nous</a>
+                                        <a href="{{ route('contact') }}" class="boxed-btn">S'engager</a>
+                                        <a href="{{ route('contact') }}" class="bordered-btn">Contactez-nous</a>
                                     </div>
                                 </div>
                             </div>
@@ -86,7 +86,7 @@
             <div class="contenu">
                 <h2 class="titresecondaire">Explorez notre Carte Interactive</h2>
                 <p>Découvrez les trésors cachés des mangroves sénégalaises grâce à notre carte interactive immersive. Plongez dans l'univers fascinant de ces écosystèmes uniques, explorez les zones de préservation, et suivez l'impact de nos actions. Cliquez ci-dessous pour commencer votre voyage interactif vers la préservation des mangroves au Sénégal.</p>
-                <a href="about.html" class="boxed-btn mt-4">Découvrir la Carte Interactive</a>
+                <a href="{{ route('carte') }}" class="boxed-btn mt-4">Découvrir la Carte Interactive</a>
             </div>
         </div>
         <!-- latest news -->
@@ -105,50 +105,50 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
                         <div class="single-latest-news">
-                            <a href="single-news.html"><div class="latest-news-bg news-bg-1"></div></a>
+                            <a href=""><div class="latest-news-bg news-bg-1"></div></a>
                             <div class="news-text-box">
-                                <h3><a href="single-news.html">Sauvons nos Mangroves</a></h3>
+                                <h3><a href="">Sauvons nos Mangroves</a></h3>
                                 <p class="blog-meta">
                                     <span class="author"><i class="fas fa-user"></i> Admin</span>
                                     <span class="date"><i class="fas fa-calendar"></i> 07 Décembre, 2023</span>
 							    </p>
                                 <p class="excerpt">Les mangroves, joyaux écologiques nichés le long de nos côtes, sont des gardiennes essentielles de la biodiversité marine ...</p>
-                                <a href="single-news.html" class="read-more-btn">Lire plus <i class="fas fa-angle-right"></i></a>
+                                <a href="" class="read-more-btn">Lire plus <i class="fas fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6">
                         <div class="single-latest-news">
-                            <a href="single-news.html"><div class="latest-news-bg news-bg-2"></div></a>
+                            <a href=""><div class="latest-news-bg news-bg-2"></div></a>
                             <div class="news-text-box">
-                                <h3><a href="single-news.html">Mangroves Vivantes, Avenir Prospère</a></h3>
+                                <h3><a href="">Mangroves Vivantes, Avenir Prospère</a></h3>
                                 <p class="blog-meta">
                                     <span class="author"><i class="fas fa-user"></i> Admin</span>
                                     <span class="date"><i class="fas fa-calendar"></i> 07 Décembre, 2023</span>
 							    </p>
                                 <p class="excerpt">Les mangroves, véritables joyaux écologiques, sont les gardiennes des côtes sénégalaises, préservant une biodiversité ...</p>
-                                <a href="single-news.html" class="read-more-btn">Lire plus <i class="fas fa-angle-right"></i></a>
+                                <a href="" class="read-more-btn">Lire plus <i class="fas fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
                         <div class="single-latest-news">
-                            <a href="single-news.html"><div class="latest-news-bg news-bg-3"></div></a>
+                            <a href=""><div class="latest-news-bg news-bg-3"></div></a>
                             <div class="news-text-box">
-                                <h3><a href="single-news.html">Protéger les Racines de la Vie Marine</a></h3>
+                                <h3><a href="">Protéger les Racines de la Vie Marine</a></h3>
                                 <p class="blog-meta">
                                     <span class="author"><i class="fas fa-user"></i> Admin</span>
                                     <span class="date"><i class="fas fa-calendar"></i> 07 Décembre, 2023</span>
 							    </p>
                                 <p class="excerpt">Les mangroves, avec leurs racines labyrinthiques plongeant dans les eaux côtières, ne sont pas seulement ...</p>
-                                <a href="single-news.html" class="read-more-btn">Lire plus <i class="fas fa-angle-right"></i></a>
+                                <a href="" class="read-more-btn">Lire plus <i class="fas fa-angle-right"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <a href="news.html" class="boxed-btn">Voir plus</a>
+                        <a href="{{ route('articlelist') }}" class="boxed-btn">Voir plus</a>
                     </div>
                 </div>
             </div>
@@ -222,37 +222,37 @@
                     <div class="col-lg-4 col-md-6 text-center">
                         <div class="single-product-item">
                             <div class="product-image">
-                                <a href="single-product.html"><img src="front/assets/img/file.jpg" alt=""></a>
+                                <a href=""><img src="front/assets/img/file.jpg" alt=""></a>
                             </div>
                             <h3>Brochure explicatve</h3>
                 
-                            <a href="cart.html" class="cart-btn">Télécharger</a>
+                            <a href="" class="cart-btn">Télécharger</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 text-center">
                         <div class="single-product-item">
                             <div class="product-image">
-                                <a href="single-product.html"><img src="front/assets/img/file.jpg" alt=""></a>
+                                <a href=""><img src="front/assets/img/file.jpg" alt=""></a>
                             </div>
                             <h3>Fiche d'identification des espèces</h3>
                             
-                            <a href="cart.html" class="cart-btn">Télécharger</a>
+                            <a href="" class="cart-btn">Télécharger</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 text-center">
                         <div class="single-product-item">
                             <div class="product-image">
-                                <a href="single-product.html"><img src="front/assets/img/file.jpg" alt=""></a>
+                                <a href=""><img src="front/assets/img/file.jpg" alt=""></a>
                             </div>
                             <h3>Guide des perturbations</h3>
                             
-                            <a href="cart.html" class="cart-btn">Télécharger</a>
+                            <a href="" class="cart-btn">Télécharger</a>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-12 text-center">
-                        <a href="news.html" class="boxed-btn">Voir plus</a>
+                        <a href="{{ route('ressourcelist') }}" class="boxed-btn">Voir plus</a>
                     </div>
                 </div>
             </div>
