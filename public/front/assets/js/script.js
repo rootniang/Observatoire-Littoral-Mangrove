@@ -254,7 +254,7 @@ const ecosysteme = [
         name: 'Joal Fadiouth',
         color:'',
         lngLat: [-16.740417,14.069981],
-        text: 'Zone de mangrove de Joal Fadiouth'
+        text: 'La mangrove de Fadiouth se développe à quelques kilomètres au Nord du Saloum. A la suite de la transgression holocène, deux fleuves fossiles (les marigots de Mbissel et de Fadiouth) sont envahis par la mer (DEBENEY et LY, 1986). La mangrove occupe une grande partie de l’estuaire.'
     },
     {
         name: 'Sokone',

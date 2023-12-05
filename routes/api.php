@@ -17,3 +17,4 @@ use App\Http\Controllers\ApiController;
 
 Route::post('login', [ApiController::class, 'authenticate']);
 Route::get('dash', [ApiController::class, 'dashboard'])->middleware('auth:sanctum');
+Route::get('getEspeces', [ApiController::class, 'getEspeces']);

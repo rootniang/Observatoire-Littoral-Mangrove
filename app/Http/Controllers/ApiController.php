@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Espece;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -31,5 +32,21 @@ class ApiController extends Controller
 
     public function dashboard() {
         echo 'Yess' ;
+    }
+
+    public function getEspeces(Request $request) {
+        $categorie = strip_tags($request->query('categorie')) ;
+        if ($categorie) {
+            if ($categorie == 'faune') {
+                return response()->json(Espece::where('categorie', 'faune')->get());
+            } elseif($categorie == 'flore') {
+                return response()->json(Espece::where('categorie', 'flore')->get());
+            } else {
+                return response()->json(["status" => "error"]);
+            }
+        }
+        else{
+            return response()->json(Espece::all());
+        }
     }
 }

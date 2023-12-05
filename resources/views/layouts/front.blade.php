@@ -110,9 +110,9 @@
                         <div class="footer-box get-in-touch">
                             <h2 class="widget-title">Contact</h2>
                             <ul>
-                                <li>34/8, East Hukupara, Gifirtok, Sadan.</li>
-                                <li>support@test.com</li>
-                                <li>+00 111 222 3333</li>
+                                <li>Ministère de l'environnement et du Développement durable, Dakar 10455. Sénégal</li>
+                                <li>support@observatoire.com</li>
+                                <li>+221 77 235 34 68</li>
                             </ul>
                         </div>
                     </div>
@@ -150,7 +150,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
-                        <p>Copyrights &copy; 2023 - <a href="https://imransdesign.com/">Carrefour Agri</a>,  All Rights Reserved.</p>
+                        <p>Copyrights &copy; 2023 - <a href="https://imransdesign.com/">ONMS</a>,  All Rights Reserved.</p>
                     </div>
                     <div class="col-lg-6 text-right col-md-12">
                         <div class="social-icons">
