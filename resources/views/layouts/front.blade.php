@@ -54,7 +54,7 @@
                             <!-- menu start -->
                             <nav class="main-menu">
                                 <ul>
-                                    <li class="current-list-item" ><a href="/">Accueil</a></li>
+                                    <li><a href="/">Accueil</a></li>
                                     <li><a href="{{ route('presentation') }}">Présentation</a></li>
                                     <li><a href="{{ route('carte') }}">La carte</a></li>
                                     <li><a href="{{ route('articlelist') }}">Nos articles</a></li>

@@ -4,7 +4,7 @@
       <div class="btn-toolbar mb-2 mb-md-0">
         <div class="btn-group me-2">
           <a href="{{ route('ecosysteme.create') }}"><button type="button" class="btn btn-sm btn-outline-secondary">Ajouter</button></a>
-          <button type="button" class="btn btn-sm btn-outline-secondary">Exporter</button>
+          <a href="{{ route('ecoFile.create') }}"><button type="button" class="btn btn-sm btn-outline-secondary">Importer</button></a>
         </div>
         <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
           <span data-feather="calendar" class="align-text-bottom"></span>

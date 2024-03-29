@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">Ajouter un média</h1>
+    <h1 class="h2">Ajouter une ressource</h1>
     
     </div>
     <div class="sectioncenter">
@@ -28,7 +28,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="mb-3">
-                            <label for="media" class="form-label">Type média</label>
+                            <label for="media" class="form-label">Type ressource</label>
                             <select name="type" class="form-select" id="media">
                                 <option value="">Choisir ...</option>
                                 <option value="image">Image</option>
@@ -40,7 +40,7 @@
                     </div>
                     <div class="col">
                         <div class="mb-3">
-                            <label for="chemin" class="form-label">Média</label>
+                            <label for="chemin" class="form-label">ressource</label>
                             <input type="file" class="form-control" name="chemin" id="assets">
                         </div>
                     </div>

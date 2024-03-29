@@ -49,4 +49,20 @@ class ApiController extends Controller
             return response()->json(Espece::all());
         }
     }
+
+    public function getMedias(Request $request) {
+        
+    }
+
+    public function getActualites(Request $request) {
+       
+    }
+
+    public function getArticles(Request $request) {
+        
+    }
+
+    public function getZones(Request $request) {
+        
+    }
 }

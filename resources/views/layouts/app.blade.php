@@ -50,7 +50,7 @@
                   <i class="icofont-dashboard-web"></i>
                   Tableau de bord
                 </a>
-              </li>
+              </li> 
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('ecosysteme.index') }}">
                   <i class="icofont-institution"></i>
@@ -66,6 +66,7 @@
                   <ul class="btn-toggle-nav">
                     <li class="nav-item"><a href="{{ route('faune.index') }}" class="nav-link">Faune</a></li>
                     <li class="nav-item"><a href="{{ route('flore.index') }}" class="nav-link">Flore</a></li>
+                    <li class="nav-item"><a href="{{ route('espece.create') }}" class="nav-link">Fichier</a></li>
                   </ul>
                 </div>
               </li>
@@ -84,7 +85,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="{{ route('media.index') }}">
                   <i class="icofont-list"></i>
-                  Médias
+                  Ressources
                 </a>
               </li>
               <li class="nav-item">

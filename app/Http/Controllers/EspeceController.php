@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use SplFileObject;
 use App\Models\Espece;
 use Illuminate\Http\Request;
 
@@ -30,12 +31,21 @@ class EspeceController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nom' => ['required', 'string', 'max:255'],
+            'nom' => ['required'],
         ]);
 
-        $espece = Espece::create([
-            'nom' => $request->nom,
-        ]);
+        $file = $request->file("nom");
+        $filecsv = new SplFileObject($file);
+        while (!$filecsv->eof()) {
+            // Lire une ligne
+            $line = $filecsv->fgets();
+
+            // Faire quelque chose avec la ligne (par exemple, l'afficher)
+            echo $line;
+        }
+        $filecsv = null ;
+        exit;
+        //var_dump($file); exit;
         return redirect()->route('espece.index');
     }
 

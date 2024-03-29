@@ -40,6 +40,8 @@ Route::get('/contact', [CarteController::class, 'contact'])->name('contact');
 Route::get('/alertefront', [AlerteController::class, 'alerteFront'])->name('alertefront');
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::get('/createFile', [EcosystemeController::class, 'createFile'])->name('ecoFile.create');
+    Route::post('/storeFile', [EcosystemeController::class, 'storeFile'])->name('ecoFile.store');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('user', UserController::class);

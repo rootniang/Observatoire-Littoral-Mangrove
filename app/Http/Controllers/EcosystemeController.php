@@ -27,6 +27,10 @@ class EcosystemeController extends Controller
         $especes = Espece::all();
         return view('ecosysteme.ecosystemeCreate', compact('especes'));
     }
+    public function createFile()
+    {
+        return view('ecosysteme.ecosystemeCreateFile');
+    }
 
     /**
      * Store a newly created resource in storage.
